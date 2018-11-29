@@ -1,0 +1,438 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<title>TNP</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+ <style>
+ {box-sizing: border-box;}
+
+ body { 
+   font-family: 'Raleway', sans-serif;
+   margin: 0;
+
+ }
+
+ .header {
+  overflow: hidden;
+  background-color: #34495e;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+	padding-left:10%;
+	color:white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+	color:white;
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+body{
+	background-color:#eceeee;
+}
+.large h2{
+  font-family: 'Raleway', sans-serif;
+  font-weight:bold 10%;
+  background-color:#eceeee;
+  padding-bottom:5%;
+  font-size:40px;
+}
+.panel-group{
+	width:105%;
+	background-color:;
+}
+.panel-heading a{
+	text-decoration: none;
+}
+.btn-primary{
+  float:left;
+  margin-left:47%;
+  padding-left:2%;
+  padding-right:2%;
+}
+
+.checkbox1{
+  margin-left:5%;
+}
+.con1{
+  width: 125px;
+  height: auto;
+  // background-color: wheat;
+  margin: 10px;  
+}
+.specon{
+  width: 100%;
+  height: auto;
+  // background-color: #efe5e5;
+  display: flex;
+
+}
+
+
+
+</style>
+</head>
+<body>
+  <div class="header">
+    <a href="#default" class="logo">Training and Placement Cell</a>
+    <div class="header-right">
+      <a href="login.html" style=color:white> <span class="glyphicon glyphicon-log-in"></span> Sign In</a>
+
+    </div>
+  </div>
+
+  <div class="large"style="padding-left:40%"> 
+    <h2>Student Details</h2>
+
+
+  </div>
+  <form class="form-horizontal" action="mng/p1.php" method="post" enctype="multipart/form-data"> 
+    <div class="container">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Personal Information</a>
+            </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse in">
+            <div class="panel-body">
+             <div class="container">
+              <h2 style=padding-left:17%></h2>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Name :</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="name" placeholder="Enter name" name="Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Admission No :</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="admission" placeholder="Enter Admission No" name="admission">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">DOB :</label>
+                <div class="col-sm-10">          
+                  <input type="date" class="form-control" id="date" placeholder="dd/mm/yy" name="date">
+                </div>
+              </div>
+              <div class="form-group">        
+                <label class="control-label col-sm-2" for="pwd">Email :</label>
+                <div class="col-sm-10">          
+                  <input type="mail" class="form-control" id="mail" placeholder="Enter Email" name="mail">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Mobile No :</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="mob" placeholder="Enter mobile no" name="mob">
+                </div>
+              </div>
+              <div class="container" style=padding-left:20%>
+                <form>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio" value="M">Male</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio" value="F">Female</label>
+                  </div>
+                </form>
+              </div>
+              <label for="comment" style=padding-left:9%>Address :</label>
+              <div class="container" style=margin-left:-1%>
+
+                <div class="form-group">
+                  <textarea class="form-control" rows="4" cols="5" id="addr" name="addr"></textarea>
+                </div>
+
+              </div>
+
+
+              <div class="specon">
+
+                <div class="con1">
+                  <label for="comment" style=padding-left:9%;text-decoration:none>Photo Upload :</label>
+                </div>
+
+                <div class="con1">
+                  <input type="file" name="photo" id="photo" style=padding-left:20%>
+                </div>
+
+              </div>
+
+              <div class="specon">
+                <div class="con1">
+                  <label for="comment" style=padding-left:9%;text-decoration:none>Resume Upload :</label>
+                </div>
+                <div class="con1">
+                  <input type="file" name="resume" id="resume" style=padding-left:20%>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Parent's Details</a>
+          </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body">
+           <div class="container">
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Father's Name :</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="fname" placeholder="Enter name" name="fname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Occupation :</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="foccu" placeholder="Enter Occupation" name="foccu">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Mobile No :</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" id="fmob" placeholder="Enter mobile no" name="fmob">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Mother's Name :</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="mname" placeholder="Enter name" name="mname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Occupation :</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="occu" placeholder="Enter Occupation" name="moccu">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Mobile No :</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" id="mob" placeholder="Enter mobile no" name="mmob">
+              </div>
+            </div>
+
+          </div></div>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Acadamic Details</a>
+          </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+          <div class="panel-body"> <div class="container">
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Course :</label>
+              <div class="col-sm-10">
+                <div class="container">
+
+                  <div class="radio">
+                    <label><input type="radio" name="optradio2" value="B.tech">B.tech</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio2" value="M.tech">M.tech</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio2" value="MCA">MCA</label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email" style=padding-left:10%>Branch :</label>
+              <div class="col-sm-10">
+
+                <div class="form-group form-inline">
+                  <select class="form-control" id="sel1" name="sel1">
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Computer Science" selected>Computer Science</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Electrical and Electronics">Electrical and Electronics</option>
+                    <option value="Electronics and Communication">Electronics and Communication</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd" style=padding-left:10%>Division :</label>
+              <div class="col-sm-10">          
+                <input type="text" class="form-control" id="division" placeholder="Enter division" name="division"><br>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email" style=padding-left:10%>Admission Quota :</label>
+              <div class="col-sm-10">
+
+                <div class="form-group form-inline">
+                  <select class="form-control" id="sel2" name="sel2">
+                    <option value="Merit">Merit</option>
+                    <option selected value="General">General</option>
+                    <option value="Reservation">Reservation</option>
+                    <option value="Management">Management</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd" style=padding-left:10%>Entrance Rank :</label>
+              <div class="col-sm-10">          
+                <input type="number" class="form-control" id="rank" placeholder="Enter rank" name="rank"><br>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd" style=padding-left:10%>Present arrears:</label>
+              <div class="col-sm-10">          
+                <input type="number" class="form-control" id="supply" placeholder="Enter arrears" name="supply"><br>
+              </div>
+            </div>
+
+            <div class="form-group" style=margin-top:5px>
+              <label class="control-label col-sm-2" for="pwd" style=padding-left:10%>History of arrears :</label>
+              <div class="col-sm-10">          
+
+                <div class="radio">
+                  <label><input type="radio" name="HOA" value="Y">Yes</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="HOA" value="N">No</label>
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd" style=padding-left:10%>10th % :</label>
+              <div class="col-sm-10">          
+                <input type="number" step="any" class="form-control" id="tenth" placeholder="Enter %" name="tenth">
+                <br>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd" style=padding-left:10%>12th % :</label>
+              <div class="col-sm-10">          
+                <input type="number" step="any" class="form-control" id="twelvw" placeholder="Enter %" name="twelve">
+                <br>
+              </div>
+            </div>
+
+            <div class="form-group  form-inline">
+              <label class="control-label col-sm-2" for="pwd" style=padding-left:10%>UG_SGPA:</label>
+              <div class="col-sm-10">          
+                <input type="number" step="any" class="form-control" id="u1" placeholder="S1 SGPA" name="u1">
+
+                <input type="number" step="any" class="form-control" id="u2" placeholder="S2 SGPA" name="u2">
+
+                <input type="number" step="any" class="form-control" id="u3" placeholder="S3 SGPA" name="u3">
+
+                <input type="number" step="any" class="form-control" id="u4" placeholder="S4 SGPA" name="u4">
+                <input type="number" step="any" class="form-control" id="u5" placeholder="S5 SGPA" name="u5">
+                <br></div>
+              </div>
+              <div class="form-group form-inline">
+                <br><label class="control-label col-sm-2" for="pwd" style=padding-left:10%>CGPA :</label>
+                <div class="col-sm-10" style=padding-left:7%>    <br>      
+                  <input type="number" step="any" class="form-control" id="ucgpa" placeholder="Enter CGPA" name="ucgpa" style=margin-left:-7.5%>
+                  <br>
+                </div>
+              </div>
+
+              <div class="form-group  form-inline">
+               <label class="control-label col-sm-2" for="pwd" style=padding-left:10%>PG_SGPA:</label>
+               <div class="col-sm-10">          
+                 <br> <input type="number" step="any" class="form-control" id="p1" placeholder="S1 SGPA" name="p1">
+
+                 <input type="number" step="any" class="form-control" id="p2" placeholder="S2 SGPA" name="p2">
+                 <br></div>
+               </div>
+
+               <div class="form-group form-inline">
+                <br><label class="control-label col-sm-2" for="pwd" style=padding-left:10%>CGPA :</label>
+                <div class="col-sm-10" style=padding-left:7%>    <br>      
+                  <input type="number" step="any" class="form-control" id="pcgpa" placeholder="Enter CGPA" name="pcgpa" style=margin-left:-7.5%>
+                  <br>
+                </div>
+              </div>
+
+
+              <center>
+                <h5 style=margin-top:3%><br>DECLARATION</h5>
+                <P>I here by declare that all the above information are true and correct to the best of my knowledge.I hereby agree to abid by the rules and regulations of the Training and Placement cell of Mar Athanasius College of Engineering,Kothamangalams </P>
+              </center>
+              <div class="checkbox checkbox1">
+                <label><input type="checkbox" value="">I agree</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div></div> 
+          </div>
+        </div>
+      </div> 
+    </div>
+  </form>
+</body>
+</html>
